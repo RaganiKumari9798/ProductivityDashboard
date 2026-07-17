@@ -24,13 +24,13 @@ A modern and responsive Productivity Dashboard built using **HTML, CSS, and Java
 
 ## 📅 Daily Planner
 
-<img width="1917" height="978" alt="Image" src="https://github.com/user-attachments/assets/ee2c4666-254d-48c8-aafa-6935d2d757af" />
+<img width="1912" height="970" alt="Image" src="https://github.com/user-attachments/assets/88c6e680-ea10-4357-bfd9-6753feaf67d2" />
 
 ---
 
 ## 🎯 Daily Goals
 
-<img width="1912" height="970" alt="Image" src="https://github.com/user-attachments/assets/88c6e680-ea10-4357-bfd9-6753feaf67d2" />
+<img width="1917" height="978" alt="Image" src="https://github.com/user-attachments/assets/ee2c4666-254d-48c8-aafa-6935d2d757af" />
 
 ---
 
