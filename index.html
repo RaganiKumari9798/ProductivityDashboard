@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="dashboard">
+      <div class="weather-banner">
+        <div class="left">
+          <div class="weather-head">
+            <img id="weatherIcon" src="" alt="" />
+
+            <div>
+              <h2 id="condition">Loading...</h2>
+
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city">Loading...</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="temp-box">
+            <h1><span id="temperature">--</span>°C</h1>
+
+            <div class="date">
+              <h3 id="currentDay">Wednesday</h3>
+
+              <p id="currentDate">16 July 2026</p>
+            </div>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail">
+              💧
+              <div>
+                <p>Humidity</p>
+                <h3 id="humidity">--%</h3>
+              </div>
+            </div>
+
+            <div class="detail">
+              <!-- 🌬 -->
+              <i class="ri-windy-fill"></i>
+              <div>
+                <p>Wind</p>
+                <h3 id="windSpeed">-- km/h</h3>
+              </div>
+            </div>
+
+            <div class="detail">
+              <!-- 🌡 -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                id="Temperature-Thermometer-High--Streamline-Ultimate"
+                height="28"
+                width="26"
+              >
+                <desc>
+                  Temperature Thermometer High Streamline Icon:
+                  https://streamlinehq.com
+                </desc>
+                <path
+                  stroke="#191919"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.8647 13.4426h1.9215"
+                  stroke-width="1"
+                ></path>
+                <path
+                  stroke="#191919"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.8647 8.63907h1.9215"
+                  stroke-width="1"
+                ></path>
+                <path
+                  stroke="#191919"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.8647 3.83554h1.9215"
+                  stroke-width="1"
+                ></path>
+                <path
+                  fill="#ff808c"
+                  d="M12.9526 15.8635V2.91324c0 -0.50742 -0.2015 -0.99406 -0.5603 -1.35286C12.0335 1.20157 11.5468 1 11.0394 1s-0.9941 0.20157 -1.35287 0.56038c-0.3588 0.3588 -0.56037 0.84544 -0.56037 1.35286V15.8635c-0.72902 0.4211 -1.29875 1.0709 -1.62083 1.8487 -0.32209 0.7778 -0.37853 1.6402 -0.16058 2.4534 0.21795 0.8131 0.69811 1.5317 1.36603 2.0442 0.66792 0.5124 1.48632 0.7902 2.32812 0.7902 0.8419 0 1.6602 -0.2778 2.3282 -0.7902 0.6679 -0.5125 1.148 -1.2311 1.366 -2.0442 0.2179 -0.8132 0.1615 -1.6756 -0.1606 -2.4534 -0.3221 -0.7778 -0.8908 -1.4276 -1.6199 -1.8487Z"
+                  stroke-width="1"
+                ></path>
+                <path
+                  fill="#ffef5e"
+                  stroke="#191919"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.0389 20.1282c0.2537 0 0.4969 -0.1008 0.6763 -0.2802 0.1793 -0.1793 0.2801 -0.4226 0.2801 -0.6762 0 -0.2537 -0.1008 -0.4969 -0.2801 -0.6763 -0.1794 -0.1793 -0.4226 -0.2801 -0.6763 -0.2801 -0.2535 0 -0.4966 0.1007 -0.6759 0.28 -0.1793 0.1792 -0.28 0.4224 -0.28 0.6759 0 0.2535 0.1007 0.4967 0.28 0.6759 0.1793 0.1793 0.4224 0.281 0.6759 0.281Z"
+                  stroke-width="1"
+                ></path>
+                <path
+                  fill="#ffffff"
+                  d="M11.0392 1.00146c-0.507 0 -0.9933 0.20143 -1.3518 0.55996 -0.35854 0.35853 -0.55996 0.84481 -0.55996 1.35185v4.99758H12.952V2.91423c0.0001 -0.25106 -0.0492 -0.49969 -0.1452 -0.73169 -0.0959 -0.232 -0.2366 -0.44283 -0.4141 -0.62044 -0.1774 -0.17762 -0.3881 -0.31855 -0.62 -0.41474s-0.4805 -0.14577 -0.7315 -0.1459h-0.002Z"
+                  stroke-width="1"
+                ></path>
+                <path
+                  stroke="#191919"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.9526 15.8635V2.91324c0 -0.50742 -0.2015 -0.99406 -0.5603 -1.35286C12.0335 1.20157 11.5468 1 11.0394 1s-0.9941 0.20157 -1.35287 0.56038c-0.3588 0.3588 -0.56037 0.84544 -0.56037 1.35286V15.8635c-0.72902 0.4211 -1.29875 1.0709 -1.62083 1.8487 -0.32209 0.7778 -0.37853 1.6402 -0.16058 2.4534 0.21795 0.8131 0.69811 1.5317 1.36603 2.0442 0.66792 0.5124 1.48632 0.7902 2.32812 0.7902 0.8419 0 1.6602 -0.2778 2.3282 -0.7902 0.6679 -0.5125 1.148 -1.2311 1.366 -2.0442 0.2179 -0.8132 0.1615 -1.6756 -0.1606 -2.4534 -0.3221 -0.7778 -0.8908 -1.4276 -1.6199 -1.8487Z"
+                  stroke-width="1"
+                ></path>
+                <path
+                  stroke="#191919"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.0391 18.2154V3.87012"
+                  stroke-width="1"
+                ></path>
+              </svg>
+              <div>
+                <p>Feels Like</p>
+                <h3><span id="feelsLike">--</span>°C</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <button id="themeBtn">🌙</button>
+
+          <h1 id="currentTime"></h1>
+        </div>
+      </div>
+
+      <section class="second-row">
+        <div class="card" id="todoCard">
+          <div class="icon-box">
+            <i class="ri-task-line"></i>
+          </div>
+
+          <h2>To Do List</h2>
+          <p>Manage your daily tasks</p>
+        </div>
+
+        <div class="card" id="plannerCard">
+          <div class="icon-box">
+            <i class="ri-calendar-check-line"></i>
+          </div>
+
+          <h2>Daily Planner</h2>
+          <p>Plan your entire day</p>
+        </div>
+
+        <div class="card" id="goalCard">
+          <div class="icon-box">
+            <i class="ri-flag-line"></i>
+          </div>
+
+          <h2>Daily Goals</h2>
+          <p>Achieve your targets</p>
+        </div>
+      </section>
+
+      <!-- ================= Third Row ================= -->
+
+      <section class="third-row">
+        <!-- Pomodoro Timer -->
+        <div class="card" id="pomodoroCard">
+          <div class="icon-box">
+            <i class="ri-timer-flash-line"></i>
+          </div>
+
+          <h2>Pomodoro Timer</h2>
+          <p>Stay focused and productive.</p>
+        </div>
+
+        <!-- Motivation Quotes -->
+        <div class="card" id="motivationCard">
+          <div class="icon-box">
+            <i class="ri-double-quotes-l"></i>
+          </div>
+
+          <h2>Motivation Quotes</h2>
+          <p id="quote">"Boost your daily motivation."</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Motivation Page -->
+    <section id="motivationPage" class="feature-page">
+      <button class="backBtn"><i class="ri-arrow-left-line"></i> Back</button>
+
+      <div class="quote-card">
+        <h1>Motivation Quotes</h1>
+
+        <p id="quoteText">Click "New Quote" to stay motivated.</p>
+
+        <h3 id="quoteAuthor"></h3>
+
+        <button id="newQuoteBtn">New Quote</button>
+      </div>
+    </section>
+
+    <!-- ================= Pomodoro Page ================= -->
+
+    <section id="pomodoroPage" class="feature-page">
+      <button class="backBtn"><i class="ri-arrow-left-line"></i> Back</button>
+
+      <div class="pomodoro-container">
+        <h1>Pomodoro Timer</h1>
+
+        <div class="timer-icon">
+          <i class="ri-timer-flash-line"></i>
+        </div>
+
+        <h2 id="timer">25:00</h2>
+
+        <div class="timer-btns">
+          <button id="startBtn">Start</button>
+
+          <button id="pauseBtn">Pause</button>
+
+          <button id="resetBtn">Reset</button>
+        </div>
+
+        <p id="status">Ready to Focus 🚀</p>
+      </div>
+    </section>
+
+    <!-- daily goal page -->
+
+    <section id="goalPage" class="feature-page">
+      <button class="backBtn"><i class="ri-arrow-left-line"></i> Back</button>
+
+      <div class="goal-container">
+        <h1>🎯 Daily Goals</h1>
+
+        <p>Set your goals and achieve them one step at a time.</p>
+
+        <div class="goal-input">
+          <input
+            type="text"
+            id="goalInput"
+            placeholder="Enter today's goal..."
+          />
+
+          <button id="addGoalBtn">+ Add Goal</button>
+        </div>
+
+        <div class="progress">
+          <h3>Today's Progress</h3>
+
+          <h2 id="goalCount">0 / 0 Completed</h2>
+        </div>
+
+        <div id="goalList"></div>
+      </div>
+    </section>
+
+    <!-- daily palnner page -->
+
+    <section id="plannerPage" class="feature-page">
+      <button class="backBtn"><i class="ri-arrow-left-line"></i> Back</button>
+
+      <div class="planner-header">
+        <div class="planner-left">
+          <h1><i class="ri-calendar-check-line"></i> Daily Planner</h1>
+
+          <p>Organize your schedule and stay on track.</p>
+        </div>
+
+        <div class="planner-right">
+          <h3 id="plannerDate"></h3>
+
+          <h2 id="plannerTime"></h2>
+        </div>
+      </div>
+
+      <div class="planner-container">
+        <div id="plannerContainer"></div>
+      </div>
+    </section>
+
+    <!-- todo list page -->
+
+    <section id="todoPage" class="feature-page">
+      <button class="backBtn"><i class="ri-arrow-left-line"></i> Back</button>
+
+      <div class="todo-header">
+        <div class="todo-left">
+          <h1><i class="ri-task-line"></i> To-Do List</h1>
+
+          <p>Stay organized by managing your daily tasks.</p>
+        </div>
+      </div>
+
+      <div class="todo-input">
+        <input type="text" id="taskInput" placeholder="Enter your task..." />
+
+        <button id="addTaskBtn">
+          <i class="ri-add-line"></i>
+
+          Add Task
+        </button>
+      </div>
+
+      <div id="taskList"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
